@@ -1,3 +1,5 @@
+import Foundation
+
 #if canImport(UIKit)
 import UIKit
 
@@ -6,9 +8,9 @@ public class GreetingView: UIView {
     private let label = UILabel()
     private var currentName: String
     
-    public init(name: String, frame: CGRect = .zero) {
+    public init(name: String) {
         self.currentName = name
-        super.init(frame: frame)
+        super.init(frame: .zero)
         setupUI()
     }
     
@@ -33,13 +35,16 @@ public class GreetingView: UIView {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
+            label.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
     
+    // This method was missing in your original SDK
     public func updateName(_ name: String) {
         currentName = name
         label.text = "Hello, \(name)!"
     }
 }
+
 #endif
