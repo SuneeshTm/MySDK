@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "MySDK",
     platforms: [
-        .iOS(.v12) // or whichever minimum version you want
+        .iOS(.v12) 
     ],
     products: [
         .library(
@@ -15,6 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "MySDK",
+            dependencies: [],
             path: "Sources"
         )
     ]
