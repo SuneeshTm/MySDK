@@ -1,6 +1,5 @@
 #if canImport(UIKit)
 import UIKit
-#endif
 
 public class GreetingView: UIView {
     
@@ -29,3 +28,4 @@ public class GreetingView: UIView {
         ])
     }
 }
+#endif
