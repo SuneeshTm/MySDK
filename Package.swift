@@ -1,23 +1,13 @@
-// swift-tools-version: 5.7
+/ swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
     name: "MySDK",
-    platforms: [
-        .iOS(.v13),
-        .macOS(.v10_15)
-    ],
+    platforms: [.iOS(.v13)],
     products: [
-        .library(
-            name: "MySDK",
-            targets: ["MySDK"]),
+        .library(name: "MySDK", targets: ["MySDK"]),
     ],
     targets: [
-        .target(
-            name: "MySDK",
-            dependencies: []),
-        .testTarget(
-            name: "MySDKTests",
-            dependencies: ["MySDK"]),
+        .target(name: "MySDK", dependencies: []),
     ]
 )
