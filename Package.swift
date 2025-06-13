@@ -1,4 +1,3 @@
-/ swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
@@ -8,6 +7,6 @@ let package = Package(
         .library(name: "MySDK", targets: ["MySDK"]),
     ],
     targets: [
-        .target(name: "MySDK", dependencies: []),
+        .target(name: "MySDK"),
     ]
 )

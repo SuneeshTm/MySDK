@@ -1,7 +1,6 @@
 import SwiftUI
 
-// Pure SwiftUI approach - no UIKit needed
-public struct SDKGreetingView: View {
+public struct GreetingView: View {
     public let name: String
     
     public init(name: String) {
@@ -10,13 +9,11 @@ public struct SDKGreetingView: View {
     
     public var body: some View {
         Text("Hello, \(name)!")
-            .font(.system(size: 18, weight: .bold))
+            .font(.title2)
+            .fontWeight(.bold)
             .foregroundColor(.white)
-            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.teal)
-            )
+            .background(Color.teal)
+            .cornerRadius(12)
     }
 }
